@@ -40,7 +40,7 @@ spoiler_angle     6.877e-02  6.653e-02   1.034   0.3069
 ground_clearance  3.546e+00  5.412e-01   6.551 5.21e-08 ***
   AWD              -3.411e+00  2.535e+00  -1.346   0.1852    
 ---
-  Signif. codes:  0 ¡®***¡¯ 0.001 ¡®**¡¯ 0.01 ¡®*¡¯ 0.05 ¡®.¡¯ 0.1 ¡® ¡¯ 1
+  Signif. codes:  0 Â¡Â®***Â¡Â¯ 0.001 Â¡Â®**Â¡Â¯ 0.01 Â¡Â®*Â¡Â¯ 0.05 Â¡Â®.Â¡Â¯ 0.1 Â¡Â® Â¡Â¯ 1
 
 Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
@@ -55,33 +55,7 @@ VehicleID Manufacturing_Lot  PSI
 4     V6004              Lot1 1500
 5     V7000              Lot1 1501
 6    V17344              Lot1 1501
-> head(Coil_Data)
-VehicleID Manufacturing_Lot  PSI
-1    V40858              Lot1 1499
-2    V40607              Lot1 1500
-3    V31443              Lot1 1500
-4     V6004              Lot1 1500
-5     V7000              Lot1 1501
-6    V17344              Lot1 1501
-> Coil_Data <- read.csv('Suspension_Coil.csv')
-> head(Coil_Data)
-VehicleID Manufacturing_Lot  PSI
-1    V40858              Lot1 1499
-2    V40607              Lot1 1500
-3    V31443              Lot1 1500
-4     V6004              Lot1 1500
-5     V7000              Lot1 1501
-6    V17344              Lot1 1501
-> View(Car_Data)
-> View(Coil_Data)
-> head(Coil_Data)
-VehicleID Manufacturing_Lot  PSI
-1    V40858              Lot1 1499
-2    V40607              Lot1 1500
-3    V31443              Lot1 1500
-4     V6004              Lot1 1500
-5     V7000              Lot1 1501
-6    V17344              Lot1 1501
+
 > Mean = mean(Coil_Data$PSI)
 > Median=median(Coil_Data$PSI)
 > Variance=var(Coil_Data$PSI)
@@ -89,7 +63,7 @@ VehicleID Manufacturing_Lot  PSI
 > total_Summary <- data.frame(Mean,Median,Variance,SD)
 > lot_summary <- Coil_Data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median = median(PSI),Variance = var(PSI),SD = sd(PSI), .groups = 'keep') 
 > source("C:/Users/Juijie/Desktop/Analysis Projects/M-15/MechaCar_Challenge.R")
-> lot_summary <- Coil_Data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median = median(PSI),Variance = var(PSI),SD = sd(PSI), .groups = 'keep') 
+
 > lot_summary <- Coil_Data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median = median(PSI),Variance = var(PSI),SD = sd(PSI), .groups = 'keep') 
 > t.test((Coil_Data$PSI),mu = 1500)
 
